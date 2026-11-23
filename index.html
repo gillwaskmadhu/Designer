@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> UI/UX Designer &amp; Developer</title>
+  <meta name="description"
+    content="A cinematic portfolio journey — forged through curiosity, creativity, and craft. UI/UX design and frontend development.">
+  <link rel="icon" href="images/projects/fire.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/projects/fire.png">
+  <link rel="stylesheet" href="js/vendor/lenis.css">
+  <link rel="stylesheet" href="css/styles.css?v=68">
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
+</head>
+
+<body class="is-preloading">
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__content">
+      <p class="fire-text preloader__copy" id="preloader-text">
+        “From the spark of knowledge,<br>a new path begins.”
+      </p>
+      <button class="cta preloader__skip" id="preloader-skip" type="button">Skip</button>
+    </div>
+  </div>
+
+  <canvas id="canvas" aria-hidden="true"></canvas>
+  <div class="embers" aria-hidden="true" id="embers"></div>
+
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-brand" href="#ignition" data-section="ignition">G</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#ignition" data-section="ignition">Ignition</a>
+      <a href="#spark" data-section="spark">Spark</a>
+      <a href="#experience" data-section="experience">Forging</a>
+      <a href="#education" data-section="education">Foundation</a>
+      <a href="#skills" data-section="skills">Elements</a>
+      <a href="#projects" data-section="projects">Creations</a>
+      <a href="#craft" data-section="craft">Craft</a>
+      <a class="nav-cta nav-cta-mobile" href="#contact" data-section="contact">Connect</a>
+    </div>
+    <a class="nav-cta nav-cta-desktop" href="#contact" data-section="contact">Connect</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="portfolio">
+    <!-- 01 Ignition -->
+    <section id="ignition" class="panel panel-hero is-active" data-section="ignition">
+      <div class="panel-inner wide hero-stack">
+        <p class="eyebrow journey-label">Ignition</p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="fire-text hero-title" data-burn-in>FORGED BY FIRE.</h1>
+            <p class="hero-spark">Every spark begins with an idea. Every flame begins with a spark.</p>
+            <p class="lede left hero-lede">
+              A creative mind. A curious soul. Turning imagination into meaningful digital experiences.
+            </p>
+            <div class="cta-row">
+              <a class="cta" href="#spark">Explore the Journey <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <ul class="stat-list" aria-label="Highlights">
+            <li>
+              <span class="stat-value">6+</span>
+              <span class="stat-label">Years experience</span>
+            </li>
+            <li>
+              <span class="stat-value">Imagination → Interaction</span>
+              <span class="stat-label">End-to-end delivery</span>
+            </li>
+            <li>
+              <span class="stat-value">AI-ready</span>
+              <span class="stat-label">Modern design workflows</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 The Spark -->
+    <section id="spark" class="panel" data-section="spark">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Spark</p>
+          <h2 class="fire-text section-title">EVERYTHING STARTS WITH A SPARK.</h2>
+        </header>
+        <div class="prose-block">
+          <p class="lede left">
+            Curiosity was the first flame. Experimentation kept it alive. Every challenge added another layer of heat.
+            What emerged was a passion for creating experiences that don't just work — they connect, communicate, and
+            leave an impression.
+          </p>
+          <div class="mindset-grid">
+            <article class="mindset-item">
+              <span class="feature-num">Mindset</span>
+              <h3>Design with intention</h3>
+              <p>
+                UI/UX is not decoration — it is how ideas become usable, memorable, and human.
+              </p>
+            </article>
+            <article class="mindset-item">
+              <span class="feature-num">Approach</span>
+              <h3>Build what you design</h3>
+              <p>
+                Moving between Figma and code means decisions stay sharp from concept to the final interface.
+              </p>
+            </article>
+            <article class="mindset-item">
+              <span class="feature-num">Drive</span>
+              <h3>Stay curious</h3>
+              <p>
+                Every project is another chance to refine the craft — through research, iteration, and thoughtful
+                execution.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Experience -->
+    <section id="experience" class="panel panel-experience" data-section="experience">
+      <div class="experience-pin">
+        <div class="panel-inner wide experience-pin__inner">
+          <header class="section-head section-head--stack experience-pin__header">
+            <p class="eyebrow journey-label">Tempered by Experience</p>
+            <h2 class="fire-text section-title section-title--two-line">FIRE DOESN'T JUST BURN.<br>IT REFINES.</h2>
+            <p class="section-intro wide-intro">
+              Not born perfect. Not built overnight. Forged through every challenge — across agencies, startups, and
+              enterprise product work.
+            </p>
+          </header>
+          <div class="experience-stage">
+            <ol class="forge-timeline forge-timeline--pinned" id="experience-list" aria-label="Professional experience">
+            </ol>
+            <div class="experience-stepper" id="experience-stepper" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Education -->
+    <section id="education" class="panel panel-foundation" data-section="education">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Foundation</p>
+          <h2 class="fire-text section-title section-title--two-line">EVERY FLAME NEEDS<br>A FOUNDATION.</h2>
+          <p class="section-intro wide-intro">
+            Before the fire could take shape, there was a foundation built on learning, curiosity, and the desire to
+            understand how things work.
+          </p>
+        </header>
+        <div class="foundation-cross">
+          <div class="foundation-cross__grid" id="education-list"></div>
+          <div class="foundation-cross__core" aria-hidden="true">
+            <span class="foundation-cross__ember">
+              <span class="foundation-cross__amp">&amp;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Skills -->
+    <section id="skills" class="panel panel-tall" data-section="skills">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Elements of Creation</p>
+          <h2 class="fire-text section-title section-title--two-line">DIFFERENT ELEMENTS.<br>ONE CREATIVE FORCE.</h2>
+        </header>
+        <div class="elements-grid" id="skills-list"></div>
+      </div>
+    </section>
+
+    <!-- 06 Projects -->
+    <section id="projects" class="panel panel-tall panel-cases" data-section="projects">
+      <div class="panel-inner wide cases-shell">
+        <header class="cases-head">
+          <div class="cases-head__copy">
+            <p class="eyebrow journey-label">What the Fire Created</p>
+            <h2 class="fire-text section-title section-title--cases section-title--two-line">THE PROOF IS IN WHAT<br>THE
+              FIRE LEFT BEHIND.</h2>
+            <p class="section-intro wide-intro">
+              Not just pixels. Not just lines of code. Each project represents a challenge, a process, and a solution
+              shaped with intention.
+            </p>
+          </div>
+          <div class="cases-nav" aria-label="Project slider controls">
+            <button class="cases-nav__btn" type="button" id="cases-prev" aria-label="Previous project">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="cases-nav__btn" type="button" id="cases-next" aria-label="Next project">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="cases-slider" id="projects-slider" aria-roledescription="carousel" aria-label="Project showcase">
+          <div class="cases-track" id="projects-list"></div>
+        </div>
+        <div class="cases-dots" id="projects-dots" role="tablist" aria-label="Project slides"></div>
+      </div>
+    </section>
+
+    <!-- 07 Philosophy -->
+    <section id="craft" class="panel" data-section="craft">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Craft</p>
+          <h2 class="fire-text section-title section-title--two-line">CREATIVITY PROVIDES THE SPARK.<br>PURPOSE GIVES IT
+            DIRECTION.</h2>
+        </header>
+        <div class="craft-grid" id="philosophy-list"></div>
+      </div>
+    </section>
+
+    <!-- 08 Beyond -->
+    <section id="evolution" class="panel" data-section="evolution">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Human Side</p>
+          <h2 class="fire-text section-title">THE FIRE NEVER STOPS EVOLVING.</h2>
+        </header>
+        <div class="evolution-grid" id="beyond-list"></div>
+      </div>
+    </section>
+
+    <!-- 09 Contact -->
+    <section id="contact" class="panel" data-section="contact">
+      <div class="panel-inner wide">
+        <header class="section-head section-head--stack">
+          <p class="eyebrow journey-label">The Next Spark</p>
+          <h2 class="fire-text section-title">THE NEXT SPARK COULD START HERE.</h2>
+          <p class="section-intro wide-intro">
+            Every great creation begins with a conversation. Have an idea worth bringing to life? Let's make something
+            meaningful.
+          </p>
+        </header>
+        <div class="contact-block" id="contact-block"></div>
+      </div>
+      <p class="contact-copyright">© 2026 Gillwas K Madhu</p>
+    </section>
+  </main>
+
+  <button class="flame-scroll" id="flame-scroll" type="button" aria-label="Scroll to next section">
+    <span class="flame-scroll__ring" aria-hidden="true"></span>
+    <span class="flame-scroll__glow" aria-hidden="true"></span>
+    <svg class="flame-scroll__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 5v12"></path>
+      <path d="M6.5 12.5 12 18l5.5-5.5"></path>
+    </svg>
+  </button>
+
+  <script id="fs" type="x-shader/x-fragment">
+  #ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision highp float;
+#endif
+
+uniform vec2 resolution;
+uniform float time;
+uniform vec4 mouse;
+uniform vec4 date;
+uniform int pointerCount;
+uniform vec3 pointers[10];
+float anim = 0.1;
+
+uniform float     iTime;
+uniform float     iTimeDelta;
+uniform float     iFrameRate;
+uniform int       iFrame;
+uniform float     iChannelTime[4];
+uniform vec3      iChannelResolution[4];
+uniform sampler2D iChannel0, iChannel1, iChannel2, iChannel3;
+uniform float     iSampleRate;
+uniform float iBlockOffset;
+
+vec3 mod289(vec3 x) {
+return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 mod289(vec4 x) {
+return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 permute(vec4 x) {
+   return mod289(((x*34.0)+1.0)*x);
+}
+
+vec4 taylorInvSqrt(vec4 r)
+{
+return 1.79284291400159 - 0.85373472095314 * r;
+}
+
+float snoise(vec3 v)
+{
+const vec2	C = vec2(1.0/6.0, 1.0/3.0) ;
+const vec4	D = vec4(0.0, 0.5, 1.0, 2.0);
+
+vec3 i	= floor(v + dot(v, C.yyy) );
+vec3 x0 =	 v - i + dot(i, C.xxx) ;
+
+vec3 g = step(x0.yzx, x0.xyz);
+vec3 l = 1.0 - g;
+vec3 i1 = min( g.xyz, l.zxy );
+vec3 i2 = max( g.xyz, l.zxy );
+
+vec3 x1 = x0 - i1 + C.xxx;
+vec3 x2 = x0 - i2 + C.yyy;
+vec3 x3 = x0 - D.yyy;
+
+i = mod289(i);
+vec4 p = permute( permute( permute(
+           i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+         + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+         + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+
+float n_ = 0.142857142857;
+vec3	ns = n_ * D.wyz - D.xzx;
+
+vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
+
+vec4 x_ = floor(j * ns.z);
+vec4 y_ = floor(j - 7.0 * x_ );
+
+vec4 x = x_ *ns.x + ns.yyyy;
+vec4 y = y_ *ns.x + ns.yyyy;
+vec4 h = 1.0 - abs(x) - abs(y);
+
+vec4 b0 = vec4( x.xy, y.xy );
+vec4 b1 = vec4( x.zw, y.zw );
+
+vec4 s0 = floor(b0)*2.0 + 1.0;
+vec4 s1 = floor(b1)*2.0 + 1.0;
+vec4 sh = -step(h, vec4(0.0));
+
+vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+
+vec3 p0 = vec3(a0.xy,h.x);
+vec3 p1 = vec3(a0.zw,h.y);
+vec3 p2 = vec3(a1.xy,h.z);
+vec3 p3 = vec3(a1.zw,h.w);
+
+vec4 norm = inversesqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+p0 *= norm.x;
+p1 *= norm.y;
+p2 *= norm.z;
+p3 *= norm.w;
+
+vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+m = m * m;
+return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+                              dot(p2,x2), dot(p3,x3) ) );
+}
+
+float prng(in vec2 seed) {
+seed = fract (seed * vec2 (5.3983, 5.4427));
+seed += dot (seed.yx, seed.xy + vec2 (21.5351, 14.3137));
+return fract (seed.x * seed.y );
+}
+
+float PI = 3.1415926535897932384626433832795;
+
+float noiseStack(vec3 pos,int octaves,float falloff){
+float noise = snoise(vec3(pos));
+float off = 1.0;
+if (octaves>1) {
+  pos *= 2.0;
+  off *= falloff;
+  noise = (1.0-off)*noise + off*snoise(vec3(pos));
+}
+if (octaves>2) {
+  pos *= 2.0;
+  off *= falloff;
+  noise = (1.0-off)*noise + off*snoise(vec3(pos));
+}
+if (octaves>3) {
+  pos *= 2.0;
+  off *= falloff;
+  noise = (1.0-off)*noise + off*snoise(vec3(pos));
+}
+return (1.0+noise)/2.0;
+}
+
+vec2 noiseStackUV(vec3 pos,int octaves,float falloff,float diff){
+float displaceA = noiseStack(pos,octaves,falloff);
+float displaceB = noiseStack(pos+vec3(3984.293,423.21,5235.19),octaves,falloff);
+return vec2(displaceA,displaceB);
+}
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
+  float time = iTime + time;
+  vec2 resolution = resolution.xy;
+vec2 drag = mouse.xy + sin(time);
+vec2 offset =mouse.xy + cos(time);
+float xpart = fragCoord.x/resolution.x;
+float ypart = fragCoord.y/resolution.y;
+float clip = 210.0;
+float ypartClip = fragCoord.y/clip;
+float ypartClippedFalloff = clamp(2.0-ypartClip,0.0,1.0);
+float ypartClipped = min(ypartClip,1.0);
+float ypartClippedn = 1.0-ypartClipped;
+float xfuel = 1.0-abs(2.0*xpart-1.0);
+float timeSpeed = 0.5;
+float realTime = timeSpeed*time;
+vec2 coordScaled = 0.01*fragCoord - 0.02*vec2(offset.x,0.0);
+vec3 position = vec3(coordScaled,0.0) + vec3(1223.0,6434.0,8425.0);
+vec3 flow = vec3(4.1*(0.5-xpart)*pow(ypartClippedn,4.0),-2.0*xfuel*pow(ypartClippedn,64.0),0.0);
+vec3 timing = realTime*vec3(0.0,-1.7,1.1) + flow;
+vec3 displacePos = vec3(1.0,0.5,1.0)*2.4*position+realTime*vec3(0.01,-0.7,1.3);
+vec3 displace3 = vec3(noiseStackUV(displacePos,2,0.4,0.1),0.0);
+vec3 noiseCoord = (vec3(2.0,1.0,1.0)*position+timing+0.4*displace3)/1.0;
+float noise = noiseStack(noiseCoord,3,0.4);
+float flames = pow(ypartClipped,0.3*xfuel)*pow(noise,0.3*xfuel);
+float f = ypartClippedFalloff*pow(1.0-flames*flames*flames,8.0);
+float fff = f*f*f;
+vec3 fire =1.5*vec3(f, fff, fff*fff);
+float smokeNoise = 0.5+snoise(0.4*position+timing*vec3(1.0,1.0,0.2))/2.0;
+vec3 smoke = vec3(0.3*pow(xfuel,3.0)*pow(ypart,2.0)*(smokeNoise+0.4*(1.0-noise)));
+float sparkGridSize = 30.0;
+vec2 sparkCoord = fragCoord - vec2(2.0*offset.x,190.0*realTime);
+sparkCoord -= 30.0*noiseStackUV(0.01*vec3(sparkCoord,30.0*time),1,0.4,0.1);
+sparkCoord += 100.0*flow.xy;
+if (mod(sparkCoord.y/sparkGridSize,2.0)<1.0) sparkCoord.x += 0.5*sparkGridSize;
+vec2 sparkGridIndex = vec2(floor(sparkCoord/sparkGridSize));
+float sparkRandom = prng(sparkGridIndex);
+float sparkLife = min(10.0*(1.0-min((sparkGridIndex.y+(190.0*realTime/sparkGridSize))/(24.0-20.0*sparkRandom),1.0)),1.0);
+vec3 sparks = vec3(0.0);
+if (sparkLife>0.0) {
+  float sparkSize = xfuel*xfuel*sparkRandom*0.08;
+  float sparkRadians = 999.0*sparkRandom*2.0*PI + 2.0*time;
+  vec2 sparkCircular = vec2(sin(sparkRadians),cos(sparkRadians));
+  vec2 sparkOffset = (0.5-sparkSize)*sparkGridSize*sparkCircular;
+  vec2 sparkModulus = mod(sparkCoord+sparkOffset,sparkGridSize) - 0.5*vec2(sparkGridSize);
+  float sparkLength = length(sparkModulus);
+  float sparksGray = max(0.0, 1.0 - sparkLength/(sparkSize*sparkGridSize));
+  sparks = sparkLife*sparksGray*vec3(1.0,0.3,0.0);
+}
+fragColor = vec4(max(fire,sparks)+smoke,1.0);
+}
+
+void main() {
+vec4 colorx;
+vec2 uv = gl_FragCoord.xy;
+mainImage(colorx,uv);
+gl_FragColor = colorx;
+}
+</script>
+
+  <script id="vs" type="x-shader/x-vertex">
+  attribute vec3 position;
+
+  void main(void){
+    gl_Position = vec4(position, 1.0);
+  }
+  </script>
+  <script src="js/custom.js?v=14"></script>
+  <script src="js/preloader.js?v=8"></script>
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/vendor/lenis-snap.min.js"></script>
+  <script src="js/smooth-scroll.js?v=2"></script>
+  <script src="js/content.js?v=47"></script>
+  <script src="js/audio.js?v=13"></script>
+  <script src="js/portfolio.js?v=48"></script>
+</body>
+
+</html>
