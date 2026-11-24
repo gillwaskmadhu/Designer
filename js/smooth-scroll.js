@@ -12,21 +12,30 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Real phones use touch momentum; DevTools "responsive" uses wheel.
+  // Mandatory Snap fights that momentum and feels like jerking.
+  const isTouchScroll =
+    window.matchMedia("(hover: none) and (pointer: coarse)").matches ||
+    (navigator.maxTouchPoints > 0 && window.matchMedia("(max-width: 1024px)").matches);
+
   const lenis = new Lenis({
     autoRaf: true,
     anchors: true,
     allowNestedScroll: true,
+    // Keep native touch scrolling; Lenis only for programmatic scrollTo
     syncTouch: false,
-    lerp: reduceMotion ? 1 : 0.1,
+    // Instant lerp on touch — smooth lerp + native momentum = stutter
+    lerp: reduceMotion || isTouchScroll ? 1 : 0.1,
     wheelMultiplier: 0.9,
-    touchMultiplier: 1.1,
+    touchMultiplier: 1,
   });
 
   lenis.scrollTo(0, { immediate: true });
 
   let snap = null;
 
-  if (typeof Snap !== "undefined" && !reduceMotion) {
+  // Snap only on desktop / fine pointer — never on real mobile
+  if (typeof Snap !== "undefined" && !reduceMotion && !isTouchScroll) {
     snap = new Snap(lenis, {
       type: "mandatory",
       debounce: 80,
